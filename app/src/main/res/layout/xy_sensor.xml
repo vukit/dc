@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="0dp">
+    <EditText
+        android:id="@+id/sensor_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="5dp"
+        android:autofillHints=""
+        android:hint="@string/sensor_name"
+        android:inputType="text|textNoSuggestions" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/sensor_enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:checked="true"
+                android:hint="@string/sensor_enable"
+                android:textColorHint="@android:color/black" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="0dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/y_sensor_value_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/sensor_parameter_name"
+                    android:labelFor="@+id/y_sensor_value"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@id/y_sensor_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="0dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/x_sensor_value_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/sensor_parameter_name"
+                    android:labelFor="@+id/x_sensor_value"
+                    android:textSize="18sp" />
+                <EditText
+                    android:id="@id/x_sensor_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:hint=""
+                    android:inputType="numberSigned|numberDecimal"
+                    android:textSize="18sp"
+                    tools:ignore="LabelFor" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/xy_sensor_minus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/xy_sensor_minus_button"
+                    app:srcCompat="@drawable/ic_minus" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="3dp"
+                    android:text="@string/xy_sensor_delta_word"
+                    android:textColor="@android:color/black" />
+                <ImageButton
+                    android:id="@+id/xy_sensor_plus_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/xy_sensor_plus_button"
+                    app:srcCompat="@drawable/ic_plus" />
+            </LinearLayout>
+        </LinearLayout>
+        <ru.bullyboo.view.CircleSeekBar
+            android:id="@+id/x_seek_bar"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:backgroundCircleLineColor="#c9c9c9"
+            app:backgroundCircleLineWidth="5dp"
+            app:dotColor="@color/colorAccent"
+            app:dotRadius="12dp"
+            app:progressCircleLineColor="@color/colorAccent"
+            app:progressCircleLineWidth="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:labelFor="@+id/seekBar"
+            android:text="@string/time_div"
+            android:textColor="@android:color/black" />
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="4"
+            android:progress="2" />
+    </LinearLayout>
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>

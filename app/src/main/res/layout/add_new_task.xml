@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="48dp"
+    android:layout_marginTop="48dp"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <EditText
+            android:id="@+id/task_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:hint="@string/sensor_name"
+            android:inputType="text|textNoSuggestions"
+            android:autofillHints="" />
+        <CheckBox
+            android:id="@+id/task_enable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:checked="true"
+            android:hint="@string/sensor_enable"
+            android:textColorHint="@android:color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/sensor_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/sensors"
+                android:textColor="@android:color/black" />
+            <LinearLayout
+                android:id="@+id/sensor_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/server_list_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/servers"
+                android:textColor="@android:color/black" />
+            <RadioGroup
+                android:id="@+id/server_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/schedule_type"
+            android:textColor="@android:color/black" />
+        <RadioGroup
+            android:id="@+id/radio_group_schedules"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:orientation="horizontal"
+            android:checkedButton="@+id/schedule_simple">
+            <RadioButton
+                android:id="@+id/schedule_simple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/schedule_simple"
+                android:textColorHint="@android:color/black" />
+            <RadioButton
+                android:id="@+id/schedule_cron"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/schedule_cron"
+                android:textColorHint="@android:color/black" />
+        </RadioGroup>
+        <LinearLayout
+            android:id="@+id/schedule_simple_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/schedule_simple_string"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:hint="@string/schedule_simple_sample"
+                android:inputType="text|textNoSuggestions"
+                android:autofillHints="" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/schedule_cron_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <EditText
+                android:id="@+id/schedule_cron_string"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:hint="@string/schedule_cron_sample"
+                android:inputType="text|textNoSuggestions"
+                android:autofillHints="" />
+            <EditText
+                android:id="@+id/schedule_cron_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:hint="@string/schedule_cron_amount"
+                android:inputType="text|textNoSuggestions"
+                android:autofillHints="" />
+            <EditText
+                android:id="@+id/schedule_cron_period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:hint="@string/schedule_cron_period"
+                android:inputType="text|textNoSuggestions"
+                android:autofillHints="" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="48dp"
+    android:layout_marginBottom="48dp"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+        <EditText
+            android:id="@+id/server_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="text|textNoSuggestions"
+            android:hint="@string/server_name"
+            android:autofillHints="" />
+        <EditText
+            android:id="@+id/server_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="textUri|textNoSuggestions"
+            android:hint="@string/server_url"
+            android:autofillHints="" />
+        <EditText
+            android:id="@+id/server_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="text|textNoSuggestions"
+            android:hint="@string/server_username"
+            android:autofillHints="" />
+        <EditText
+            android:id="@+id/server_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="textPassword|textNoSuggestions"
+            android:hint="@string/server_password"
+            android:autofillHints="" />
+        <EditText
+            android:id="@+id/server_protocol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="text|textNoSuggestions"
+            android:hint="@string/server_protocol"
+            android:autofillHints="" />
+        <CheckBox
+            android:id="@+id/server_enable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/server_enable"
+            android:textColorHint="@android:color/black"
+            android:checked="true"/>
+    </LinearLayout>
+</ScrollView>

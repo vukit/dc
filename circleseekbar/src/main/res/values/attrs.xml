@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="circleProgressViewStyle" format="reference"/>
+    <declare-styleable name="CircleSeekBar">
+        <attr name="backgroundCircleLineWidth" format="dimension"/>
+        <attr name="progressCircleLineWidth" format="dimension"/>
+        <attr name="backgroundCircleLineColor" format="color"/>
+        <attr name="progressCircleLineColor" format="color"/>
+        <attr name="dotRadius" format="dimension"/>
+        <attr name="dotColor" format="color"/>
+        <attr name="minValue" format="integer"/>
+        <attr name="maxValue" format="integer"/>
+        <attr name="value" format="integer"/>
+        <attr name="textAppearance" format="reference"/>
+        <attr name="showCounter" format="boolean"/>
+    </declare-styleable>
+</resources>

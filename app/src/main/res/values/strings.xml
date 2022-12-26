@@ -1,0 +1,161 @@
+<resources>
+    <string name="app_name_full">Data Collector</string>
+    <string name="app_logo">Logo</string>
+    <string name="vendor_name">vukit.ru</string>
+    <string name="app_version">Version</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_sensors">Sensors</string>
+    <string name="action_servers">Servers</string>
+    <string name="action_tasks">Tasks</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="about_text">The application collects data from sensors and sends them in JSON format to an unlimited number of servers via HTTP, HTTPS, Web Socket, Web Socket Secure at specified times.</string>
+    <string name="action_about_url">https://vukit.ru/en/projects/data-collector/</string>
+    <string name="action_vendor_url">https://vukit.ru/en/</string>
+    <string name="action_view_details">View details</string>
+    <string name="action_view_more_apps">More apps</string>
+    <string name="action_view_rate_app">Rate app</string>
+    <string name="delete_sensor">Delete sensor</string>
+    <string name="settings_sensor">Settings</string>
+    <string name="clear_sensor">Clear sensor</string>
+    <string name="send_sensor">Send data</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="sensor_data_transfer">Data transfer:</string>
+    <string name="data_transfer_manually">Manually</string>
+    <string name="data_transfer_change">Upon changes</string>
+    <string name="data_transfer_periodic">Periodic (sec)</string>
+    <string name="data_transfer_period">Period (sec)</string>
+    <string name="action_show_location_sensor">Location Sensor</string>
+    <string name="action_show_hardware_sensor">Hardware Sensor</string>
+    <string name="action_show_text_sensor">Text Sensor</string>
+    <string name="action_show_mosaic_sensor">Mosaic Sensor</string>
+    <string name="action_show_xy_sensor">XY Sensor</string>
+    <string name="mosaic_sensor_surface">Mosaic sensor surface</string>
+    <string name="mosaic_sensor_grid">Grid:</string>
+    <string name="mosaic_sensor_grid_separator">X</string>
+    <string name="mosaic_sensor_color">Color:</string>
+    <string name="mosaic_sensor_color_picker">Color</string>
+    <string name="startup_screen">Startup screen</string>
+    <string name="background_service">Background service</string>
+    <string name="uuid">UUID</string>
+    <string name="new_server_dialog_title">New server</string>
+    <string name="edit_server_dialog_title">Edit server</string>
+    <string name="server_name">Name</string>
+    <string name="server_url">URL</string>
+    <string name="server_username">Username</string>
+    <string name="server_password">Password</string>
+    <string name="server_protocol">Protocol</string>
+    <string name="server_enable">Enable</string>
+    <string name="server_disable">disable</string>
+    <string name="server_status">Status</string>
+    <string name="server_created">Server created</string>
+    <string name="server_updated">Server updated</string>
+    <string name="server_deleted">Server deleted</string>
+    <string name="server_settings">Servers</string>
+    <string name="common_settings">Common</string>
+    <string name="server_timeout">Timeout</string>
+    <string name="new_sensor_dialog_title">New guest sensor</string>
+    <string name="edit_sensor_dialog_title">Edit sensor</string>
+    <string name="sensor_name">Name</string>
+    <string name="sensor_value">Value:</string>
+    <string name="sensor_enable">Enable</string>
+    <string name="sensor_disable">disable</string>
+    <string name="sensor_status">Status</string>
+    <string name="sensor_created">Sensor created</string>
+    <string name="new_task_dialog_title">New task</string>
+    <string name="edit_task_dialog_title">Edit task</string>
+    <string name="sensor_updated">Sensor updated</string>
+    <string name="sensor_deleted">Sensor deleted</string>
+    <string name="task_created">Task created</string>
+    <string name="task_updated">Task updated</string>
+    <string name="task_deleted">Task deleted</string>
+    <string name="task_settings">Tasks</string>
+    <string name="data_format">Data format</string>
+    <string name="msec1000">1000 ms</string>
+    <string name="msec2000">2000 ms</string>
+    <string name="msec3000">3000 ms</string>
+    <string name="msec4000">4000 ms</string>
+    <string name="msec5000">5000 ms</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="altitude">Altitude</string>
+    <string name="time_div">Time/div.</string>
+    <string name="sensors">Sensors</string>
+    <string name="servers">Servers</string>
+    <string name="sensor_select_up">Sensors: -</string>
+    <string name="sensor_select_down">Sensors: +</string>
+    <string name="server_select_up">Server: -</string>
+    <string name="server_select_down">Server: +</string>
+    <string name="task_disable">disable</string>
+    <string name="task_status">Status</string>
+    <string name="task_sensors">Sensors</string>
+    <string name="task_servers">Server</string>
+    <string name="schedule_type">Schedule type:</string>
+    <string name="schedule_simple">Simple</string>
+    <string name="schedule_cron">Cron</string>
+    <string name="schedule_simple_sample">Sampling period (ms)</string>
+    <string name="schedule_cron_sample">*/1 * * * *</string>
+    <string name="schedule_cron_amount">Number of samples</string>
+    <string name="schedule_cron_period">Sampling period (ms)</string>
+    <string name="xy_sensor_function">Function</string>
+    <string name="xy_sensor_x_parameters">X parameters:</string>
+    <string name="xy_sensor_xmax">Max: </string>
+    <string name="xy_sensor_xmin">Min: </string>
+    <string name="xy_sensor_delta">Delta: </string>
+    <string name="xy_sensor_invalid_x_parameters">Invalid X parameters</string>
+    <string name="xy_sensor_x_out_of_range">X out of range</string>
+    <string name="xy_sensor_send_x_value">Send X value</string>
+    <string name="xy_sensor_show_counter">Show counter</string>
+    <string name="xy_sensor_function_reference">Reference</string>
+    <string name="xy_sensor_function_reference_url">https://vukit.ru/en/projects/data-collector/xy-sensor-function-reference/</string>
+    <string name="xy_sensor_data_transfer_periodic">Period (msec)</string>
+    <string name="xy_sensor_data_transfer_period">Period (msec)</string>
+    <string name="xy_sensor_minus_button" translatable="false">Minus button</string>
+    <string name="xy_sensor_plus_button" translatable="false">Plus button</string>
+    <string name="xy_sensor_delta_word">Delta</string>
+    <string name="sensor_parameter_name" translatable="false">Sensor parameter name</string>
+    <string-array name="pref_startup_screen">
+        <item>@string/action_sensors</item>
+        <item>@string/action_servers</item>
+        <item>@string/action_tasks</item>
+        <item>@string/action_settings</item>
+        <item>@string/action_about</item>
+    </string-array>
+    <string-array name="server_timeouts">
+        <item>@string/msec1000</item>
+        <item>@string/msec2000</item>
+        <item>@string/msec3000</item>
+        <item>@string/msec4000</item>
+        <item>@string/msec5000</item>
+    </string-array>
+    <string name="gps_provider">GPS provider</string>
+    <string name="network_provider">Network provider</string>
+    <string name="passive_provider">Passive provider</string>
+    <string-array name="location_providers">
+        <item>@string/gps_provider</item>
+        <item>@string/network_provider</item>
+        <item>@string/passive_provider</item>
+    </string-array>
+    <string name="data_format_include_uuid">Include UUID</string>
+    <string name="data_format_include_task_name">Include task name</string>
+    <string name="data_format_include_sensor_name">Include sensor name</string>
+    <string name="data_format_include_sensor_units">Include sensor units</string>
+    <string-array name="pref_data_format">
+        <item>@string/data_format_include_uuid</item>
+        <item>@string/data_format_include_task_name</item>
+        <item>@string/data_format_include_sensor_name</item>
+        <item>@string/data_format_include_sensor_units</item>
+    </string-array>
+    <string name="text_sensor">Text sensor</string>
+    <string name="mosaic_sensor">Mosaic sensor</string>
+    <string name="xy_sensor">XY sensor</string>
+    <string-array name="sensor_types">
+        <item>@string/text_sensor</item>
+        <item>@string/mosaic_sensor</item>
+        <item>@string/xy_sensor</item>
+    </string-array>
+    <string name="add_button">Add</string>
+</resources>

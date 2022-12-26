@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/send_sensor"
+        android:orderInCategory="10"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_send"
+        android:visible="true"/>
+    <item
+        android:title="@string/clear_sensor"
+        android:orderInCategory="20"
+        app:showAsAction="never"
+        android:visible="true"/>
+    <item
+        android:title="@string/delete_sensor"
+        android:orderInCategory="30"
+        app:showAsAction="never"
+        android:visible="true"/>
+    <item
+        android:title="@string/settings_sensor"
+        android:orderInCategory="40"
+        app:showAsAction="never"
+        android:visible="true"/>
+</menu>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="7dp"
+            android:text="@string/app_name_full"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/about_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="7dp"
+                    android:text="@string/action_view_details"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/rate_app"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="7dp"
+                    android:text="@string/action_view_rate_app"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/more_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="7dp"
+                    android:text="@string/action_view_more_apps"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/app_logo"
+                app:srcCompat="@drawable/ic_logo" />
+        </LinearLayout>
+        <com.uncopt.android.widget.text.justify.JustifiedTextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="@string/about_text"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/vendorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:text="@string/vendor_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="48dp"
+    android:layout_marginTop="48dp"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbars="none">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/sensor_data_transfer"
+            android:textColor="@android:color/black" />
+        <RadioGroup
+            android:id="@+id/radio_group_data_transfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:checkedButton="@+id/data_transfer_manually"
+            android:orientation="vertical">
+            <RadioButton
+                android:id="@+id/data_transfer_manually"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/data_transfer_manually"
+                android:textColorHint="@android:color/black" />
+            <RadioButton
+                android:id="@+id/data_transfer_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/data_transfer_change"
+                android:textColorHint="@android:color/black" />
+            <RadioButton
+                android:id="@+id/data_transfer_periodic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/data_transfer_periodic"
+                android:textColorHint="@android:color/black" />
+        </RadioGroup>
+        <EditText
+            android:id="@+id/data_transfer_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:hint="@string/data_transfer_period"
+            android:inputType="number"
+            android:visibility="gone"
+            android:autofillHints="" />
+    </LinearLayout>
+</ScrollView>

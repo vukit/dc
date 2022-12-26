@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/action_sensors"
+            android:checkable="true"
+            android:icon="@drawable/action_sensors"
+            android:title="@string/action_sensors" />
+        <item
+            android:id="@+id/action_servers"
+            android:checkable="true"
+            android:icon="@drawable/action_servers"
+            android:title="@string/action_servers" />
+        <item
+            android:id="@+id/action_tasks"
+            android:checkable="true"
+            android:icon="@drawable/action_tasks"
+            android:title="@string/action_tasks" />
+        <item
+            android:id="@+id/action_settings"
+            android:checkable="true"
+            android:icon="@drawable/action_settings"
+            android:title="@string/action_settings" />
+        <item
+            android:id="@+id/action_about"
+            android:checkable="true"
+            android:icon="@drawable/action_about"
+            android:title="@string/action_about" />
+        <item
+            android:checkable="true"
+            android:title="@null"
+            android:visible="false" />
+    </group>
+</menu>

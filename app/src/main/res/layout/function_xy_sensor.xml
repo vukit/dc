@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/xy_sensor_function_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        android:background="@drawable/edit_text_border"
+        android:gravity="top|start"
+        android:hint=""
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:lines="10"
+        android:padding="20dp"
+        android:autofillHints=""
+        tools:ignore="LabelFor" />
+    <TextView
+        android:id="@+id/xy_sensor_function_reference"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="10dp"
+        android:text="@string/xy_sensor_function_reference"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+</LinearLayout>

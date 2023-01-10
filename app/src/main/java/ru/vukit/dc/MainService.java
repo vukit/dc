@@ -289,13 +289,12 @@ public class MainService extends Service {
         }, 0, DCTask.TIMEOUT);
     }
 
-    @SuppressLint("UnspecifiedImmutableFlag")
     private void restartService() {
         Log.d("DC", "RESTART");
         Intent broadcastIntent = new Intent();
         broadcastIntent.setAction("ru.vukit.dc.RESTART_MAIN_SERVICE");
         broadcastIntent.setClass(getApplicationContext(), MainBroadcastReceiver.class);
-        PendingIntent restartServicePI = PendingIntent.getBroadcast(getApplicationContext(), 1, broadcastIntent, PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent restartServicePI = PendingIntent.getBroadcast(getApplicationContext(), 1, broadcastIntent, PendingIntent.FLAG_IMMUTABLE);
         AlarmManager alarmService = (AlarmManager) getApplicationContext().getSystemService(Context.ALARM_SERVICE);
         if (alarmService != null) {
             alarmService.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 3000, restartServicePI);

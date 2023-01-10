@@ -1,34 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <PreferenceCategory android:title="@string/server_settings">
         <ListPreference
             android:defaultValue="@string/msec1000"
             android:entries="@array/server_timeouts"
             android:entryValues="@array/server_timeouts"
             android:key="SERVER_TIMEOUT"
-            android:title="@string/server_timeout" />
+            android:title="@string/server_timeout"
+            app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/task_settings">
         <MultiSelectListPreference
             android:key="DATA_FORMAT"
             android:title="@string/data_format"
             android:entries="@array/pref_data_format"
-            android:entryValues="@array/pref_data_format"/>
+            android:entryValues="@array/pref_data_format"
+            app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/common_settings">
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="BACKGROUND_SERVICE"
-            android:title="@string/background_service" />
         <ListPreference
             android:defaultValue="@string/action_about"
             android:entries="@array/pref_startup_screen"
             android:entryValues="@array/pref_startup_screen"
             android:key="STARTUP_SCREEN"
-            android:title="@string/startup_screen" />
+            android:title="@string/startup_screen"
+            app:useSimpleSummaryProvider="true"  />
         <EditTextPreference
             android:key="UUID"
-            android:title="@string/uuid"/>
+            android:title="@string/uuid"
+            app:useSimpleSummaryProvider="true" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="BACKGROUND_SERVICE"
+            android:title="@string/background_service" />
     </PreferenceCategory>
 </PreferenceScreen>

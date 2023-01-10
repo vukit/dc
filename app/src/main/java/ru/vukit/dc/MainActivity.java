@@ -107,14 +107,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         if (!state.isCheckedPermission) {
             state.permissionInternet = (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED);
-            if (!state.permissionInternet)
+            if (!state.permissionInternet) {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, PERMISSIONS_REQUEST_INTERNET);
+            }
             state.permissionAccessFineLocation = (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED);
-            if (!state.permissionAccessFineLocation)
+            if (!state.permissionAccessFineLocation) {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+            }
             state.permissionAccessCoarseLocation = (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED);
-            if (!state.permissionAccessCoarseLocation)
+            if (!state.permissionAccessCoarseLocation) {
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION);
+            }
             state.isCheckedPermission = true;
         }
     }
@@ -124,7 +127,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         state.disconnectController();
         super.onStop();
     }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {

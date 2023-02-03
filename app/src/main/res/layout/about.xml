@@ -37,28 +37,36 @@
                 android:layout_marginEnd="15dp"
                 android:orientation="vertical">
                 <TextView
-                    android:id="@+id/about_url"
+                    android:id="@+id/instruction_url"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingTop="5dp"
                     android:paddingBottom="7dp"
-                    android:text="@string/action_view_details"
+                    android:text="@string/action_view_instruction"
                     android:textColor="@color/colorAccent"
                     android:textSize="16sp" />
                 <TextView
-                    android:id="@+id/rate_app"
+                    android:id="@+id/privacy_policy_url"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="7dp"
-                    android:text="@string/action_view_rate_app"
+                    android:text="@string/action_view_privacy_policy"
                     android:textColor="@color/colorAccent"
                     android:textSize="16sp" />
                 <TextView
-                    android:id="@+id/more_apps"
+                    android:id="@+id/license_url"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingBottom="7dp"
-                    android:text="@string/action_view_more_apps"
+                    android:text="@string/action_view_license"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/all_projects_url"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="7dp"
+                    android:text="@string/action_view_all_projects"
                     android:textColor="@color/colorAccent"
                     android:textSize="16sp" />
             </LinearLayout>

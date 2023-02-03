@@ -35,9 +35,10 @@ public class About extends Fragment {
         String version;
         PackageInfo packageinfo;
         View view = inflater.inflate(R.layout.about, container, false);
-        (view.findViewById(R.id.about_url)).setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.action_about_url)))));
-        (view.findViewById(R.id.rate_app)).setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=ru.vukit.dc"))));
-        (view.findViewById(R.id.more_apps)).setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://search?q=pub:vukit.ru"))));
+        (view.findViewById(R.id.instruction_url)).setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.action_instruction_url)))));
+        (view.findViewById(R.id.privacy_policy_url)).setOnClickListener((v) -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.action_privacy_policy_url)))));
+        (view.findViewById(R.id.license_url)).setOnClickListener((v) -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.action_license_url)))));
+        (view.findViewById(R.id.all_projects_url)).setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.action_all_projects_url)))));
         try {
             packageinfo = requireActivity().getPackageManager().getPackageInfo(requireActivity().getPackageName(), 0);
             version = getString(R.string.app_version) + " " + packageinfo.versionName;

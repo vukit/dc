@@ -35,6 +35,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.gms.maps.MapView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
@@ -48,9 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     final MainActivityState state = MainActivityState.getInstance();
     SharedPreferences sharedPreferences;
     NavigationView navigationView;
-    private static final int PERMISSIONS_REQUEST_INTERNET = 1;
-    private static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 2;
-    private static final int PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 3;
+    private static final int PERMISSIONS_REQUEST_ALL = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,17 +105,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             selectAction(selectedAction);
         }
         if (!state.isCheckedPermission) {
+            List<String> permissionsRequests = new ArrayList<>();
             state.permissionInternet = (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED);
             if (!state.permissionInternet) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.INTERNET}, PERMISSIONS_REQUEST_INTERNET);
+                permissionsRequests.add(Manifest.permission.INTERNET);
             }
             state.permissionAccessFineLocation = (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED);
             if (!state.permissionAccessFineLocation) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);
+                permissionsRequests.add(Manifest.permission.ACCESS_FINE_LOCATION);
             }
             state.permissionAccessCoarseLocation = (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED);
             if (!state.permissionAccessCoarseLocation) {
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION);
+                permissionsRequests.add(Manifest.permission.ACCESS_COARSE_LOCATION);
+            }
+            if (!permissionsRequests.isEmpty()) {
+                ActivityCompat.requestPermissions(this, permissionsRequests.toArray(new String[0]), PERMISSIONS_REQUEST_ALL);
             }
             state.isCheckedPermission = true;
         }
@@ -130,16 +133,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case PERMISSIONS_REQUEST_INTERNET:
-                state.permissionInternet = (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED);
-                break;
-            case PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION:
-                state.permissionAccessFineLocation = (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED);
-                break;
-            case PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION:
-                state.permissionAccessCoarseLocation = (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED);
-                break;
+        if (requestCode == PERMISSIONS_REQUEST_ALL) {
+            for (int i = 0; i < permissions.length; i++) {
+                switch (permissions[i]) {
+                    case Manifest.permission.INTERNET:
+                        state.permissionInternet = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                        break;
+                    case Manifest.permission.ACCESS_FINE_LOCATION:
+                        state.permissionAccessFineLocation = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                        break;
+                    case Manifest.permission.ACCESS_COARSE_LOCATION:
+                        state.permissionAccessCoarseLocation = grantResults[i] == PackageManager.PERMISSION_GRANTED;
+                        break;
+                }
+            }
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
